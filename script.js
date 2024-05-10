@@ -155,3 +155,91 @@ switch (new Date().getDay()) {
     currentDay = "Saturday";
 };
 console.log(currentDay)
+
+
+// დავალება 15
+
+
+// 1. დაწერეთ for ციკლი 0 დან 100 - მდე console.log ში დაბეჭდეთ ინდექსი i
+
+
+for (let i = 0; i < 100; i++) {
+  console.log(i)
+}
+
+
+// 2. დაწერეთ while ციკლი 0 დან 50 - მდე console.log ში დაბეჭდეთ ინდექსი i
+
+
+let i = 1;
+while (i < 50) {
+  console.log(i);
+  i += 1;
+}
+
+
+// 3.შექმენით 5 ელემენტიანი  მასივი, სადაც დაამატებთ სახელებს, გამოიყენეთ pop,shift,unshift,push მეთოდები და განახორციელეთ სხვადასხვა სახელების წაშლა/დამატება. დალოგეთ თითოეული ქმედების შემდგომ  მასივის მნიშვნელობა. ისე როგორც ლექციაზე გავაკეთეთ.
+
+
+const names = ["Dato", "Giorgi", "Levani", "Nino", "Nika"];
+console.log(names);
+names.push("Tika");
+console.log(names);
+names.unshift("Lado");
+console.log(names);
+names.pop();
+console.log(names);
+names.shift();
+console.log(names);
+
+
+// 4. შექმენით ცვლადი და მიანიჭეთ ცარიელი მასივი, შემდეგ დაწერეთ Loop ( for ან while ან do while ) 1 დან 10000 - მდე ამ ,მასივში ჩაწერეთ ინდექსი გამრავლებული ინდექსზე (i * i) მასივში ჩაწერა ხდება push მეთოდის საშუალებით ლექციის ფაილში გვიწერია
+
+
+let emptyArrey = [];
+let count = 1;
+while (count < 10000) {
+  count += 1;
+  emptyArrey.push(i * i);
+};
+
+
+// 5.შექმენით 5 ელემენტიანი მასივი, რომლის თითოეული ელემენტი არის რიცხვი და for ცილის გამოყენებით დათვალეთ ჯამი
+
+
+const numbersCount = [45, 87, 745, 726, 12];
+let arraySum = 0;
+for (let i = 0; i < numbersCount.length; i++) {
+  arraySum += numbersCount[i];
+};
+
+console.log(arraySum);
+
+
+// 6. დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს ერთ მთელ რიცხვს და დააბრუნებს true -ს თუ რიცხვი არის კენტი ან false -ს თუ რიცხვი არის ლუწი.
+
+
+evenOrOdd = (number) => (number % 2 === 0) ? "false" : "true";
+
+
+console.log(evenOrOdd(13));
+console.log(evenOrOdd(14));
+
+
+// 7.დაწერეთ ფუნქცია, რომელიც მიიღებს UpperCase სტრინგს მაგ (MY NAME IS JOHN) და დააბრუნებს LowerCase (my name is john) სტრინგს
+
+
+text = (letterCase) => letterCase.toLowerCase();
+
+
+console.log(text("MY NAME IS JOHN"));
+
+
+// 8. დაწერეთ ფუნქცია, რომელიც მიიღებს რიცხვების მასივს და დააბრუნებს გაფილტრულ მასივს .filter სადაც მხოლოდ ლუწი რიცხვები იქნება
+
+
+oddNumbers = (odd) => odd.filter(odd => odd % 2 === 0);
+
+
+const odd = [9, 12, 56, 3, 13];
+console.log(oddNumbers(odd))
