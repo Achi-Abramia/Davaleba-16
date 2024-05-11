@@ -243,3 +243,84 @@ oddNumbers = (odd) => odd.filter(odd => odd % 2 === 0);
 
 const odd = [9, 12, 56, 3, 13];
 console.log(oddNumbers(odd))
+
+
+// დავალება 16
+
+
+// 1. დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს ერთ მთელ რიცხვს და დააბრუნებს true -ს თუ რიცხვი  არის 3ის ჯერადი , ხოლო თუ არაა მაშნ false-ს
+
+
+const numberDivideTree = (num) => (num % 3 === 0) ? "true" : "false";
+
+console.log(numberDivideTree(9));
+console.log(numberDivideTree(16));
+
+
+// 2. დაწერეთ ფუნქცია, getCurrencySymbolFromCode რომელიც პარამეტრად მიიღებს ვალუტის კოდს (USD ან EUR ან GEL) სტრინგის სახით და დააბრუნებს ამ კოდის შესაბამის სიმბოლოს ($, €, ლ) თუ ისეთი კოდს გადავცემ რომლის სიმბოლოც არ მაქვს დააბრუნოს კოდი.
+
+
+function getCurrencySymbolFromCode(currency) {
+  switch(currency) {
+    case "USD":
+      return "$";
+    case "EUR":
+      return "€";
+    case "GEL":
+      return "ლ";
+    default:
+      return getCurrencySymbolFromCode;
+   }
+};
+
+
+console.log(getCurrencySymbolFromCode("USD"));
+console.log(getCurrencySymbolFromCode("EUR"));
+console.log(getCurrencySymbolFromCode("GEL"));
+console.log(getCurrencySymbolFromCode("%"));
+
+
+// 3. დაწერეთ ფუნქცია, რომელიც მიიღებს lowerCase სტრინგს მაგ (my name is joe) და დააბრუნებს UpperCase (MY NAME IS JOE) სტრინგს.
+
+
+const caseChange = (text) => text.toUpperCase();
+
+console.log(caseChange("my name is joe"));
+
+
+// 4.  დაწერეთ ფუნქცია, რომელიც არგუმენტად მიიღებს გასაყიდ და ასაღებ ფასს, დათვლის მოგებას  და დააბრუნებს გასაყიდი ფასის რა პროცენტს შეადგენს მოგება.
+
+
+const profit = (sellPrice, buyPrice) => ((sellPrice - buyPrice) / buyPrice) * 100;
+
+console.log(profit(450, 350));
+
+
+// 5. დაწერეთ ფუნქცია, რომელიც მიიღებს რიცხვების მასივს და დააბრუნებს გაფილტრულ მასივს .filter სადაც მხოლოდ ლუწი რიცხვები იქნება.
+
+
+const oddNumbersArray = (filteredNumbers) => filteredNumbers.filter(filteredNumbers => filteredNumbers % 2 === 0);
+
+const oddArray = [5, 12, 89, 24, 39]
+console.log(oddNumbersArray(oddArray));
+
+
+// 6. დაწერეთ ფუნქცია, რომელიც მიიღებს ობიექტების მასივს (ობიექტს უნდა ქონდეს ველი name) და მეორე პარამეტრად მიიღებს სტრინგს და ამ მასივში .find ით მოვძებნოთ ობიექტის name === ფუნქციის მეორე პარამეტრს და დავაბრუნოთ ნაპოვნი ობიექტი.
+
+
+const infos = [
+  {
+    name: "Nino",
+    age: 40,
+  },
+  {
+    name: "Dato",
+    age: 20,
+  },
+];
+
+
+const findObjectsName = (objects, name) => objects.find(objects => objects.name === name);
+
+const findName = findObjectsName(infos, "Nino");
+console.log(findName);
