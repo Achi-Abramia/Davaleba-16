@@ -324,3 +324,24 @@ const findObjectsName = (objects, name) => objects.find(objects => objects.name 
 
 const findName = findObjectsName(infos, "Nino");
 console.log(findName);
+
+
+// დავალება 4
+
+  // შექმნით div;
+  // div ტეგის შიგნითაც დაამატეთ p ტეგი;
+  // p ტეგს დამაატეთ კლასი text;
+  // p ტეგის შიგნით დაამატეთ ტექსტი "hello world"
+
+
+  const newDiv = document.createElement("div");
+
+  const newP = document.createElement("p");
+
+  newP.classList.add("text");
+
+  newP.textContent = "hello world";
+
+  newDiv.appendChild(newP);
+
+  document.body.appendChild(newDiv);
