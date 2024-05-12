@@ -326,12 +326,17 @@ const findName = findObjectsName(infos, "Nino");
 console.log(findName);
 
 
-// დავალება 4
+// დამატებითი დავალება 4
 
   // შექმნით div;
   // div ტეგის შიგნითაც დაამატეთ p ტეგი;
   // p ტეგს დამაატეთ კლასი text;
   // p ტეგის შიგნით დაამატეთ ტექსტი "hello world"
+
+//   საბოლოოდ  html-ში ასეთი სტრუქტურა უნდა მიიღოთ
+// <div>
+// <p class="text">hello world</p>
+// </div>
 
 
   const newDiv = document.createElement("div");
@@ -345,3 +350,24 @@ console.log(findName);
   newDiv.appendChild(newP);
 
   document.body.appendChild(newDiv);
+
+
+//   დამატებითი დავალება 5
+
+
+// შექმენით 5 ელემენტიანი მასივი, რომელსაც ჯავასკრიპტით  li ტეგების შიგნით დაარენდერებთ:
+
+// საბოლოოდ  html-ში ასეთი სტრუქტურა უნდა მიიღოთ
+// <ul>
+// <li>მასივის ელემენტი</li>
+// <li>მასივის ელემენტი</li>
+// <li>მასივის ელემენტი</li>
+// <li>მასივის ელემენტი</li>
+// <li>მასივის ელემენტი</li>
+// </ul>
+
+
+const pageMenu = ["Home", "Service", "About", "Product", "Contact"];
+
+
+
